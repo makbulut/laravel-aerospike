@@ -26,6 +26,5 @@
     "psr-4": {
       "Makbulut\\Aerospike\\": "src/"
     }
-  },
-  "minimum-stability": "dev"
+  }
 }
