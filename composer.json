@@ -1,5 +1,5 @@
 {
-  "name": "scv/laravel-aerospike",
+  "name": "makbulut/laravel-aerospike",
   "description": "Aerospike cache driver for Laravel",
   "keywords": [
     "aerospike",
