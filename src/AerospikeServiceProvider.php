@@ -11,39 +11,23 @@ namespace Makbulut\Aerospike;
 use Cache;
 use Illuminate\Support\ServiceProvider;
 
-class AerospikeServiceProvider extends ServiceProvider {
+class AerospikeServiceProvider extends ServiceProvider
+{
+    /**
+     * Indicates if loading of the provider is deferred.
+     *
+     * @var bool
+     */
+    protected $defer = true;
 
-	/**
-	 * Indicates if loading of the provider is deferred.
-	 *
-	 * @var bool
-	 */
-	protected $defer = true;
-
-	/**
-	 * Register the service provider.
-	 *
-	 * @return void
-	 */
-	public function register()
-	{
-
-       /* $configPath = __DIR__ . '/../config/aerospike.php';
-        $this->mergeConfigFrom($configPath, 'aerospike');
-
-		$this->app->singleton('aerospike', function ($app) {
-			$config = $this->app['config'];
-
-			if ($config['cache.stores.aerospike.servers']) {
-				$config = $config['cache.stores.aerospike.servers'];
-			} else {
-				$config = ["hosts" => [["addr" => "localhost", "port" => 3000]]];
-			}
-
-			$db = new \Aerospike($config);
-			return $db;
-		});*/
-	}
+    /**
+     * Register the service provider.
+     *
+     * @return void
+     */
+    public function register()
+    {
+    }
 
     /**
      * Bootstrap the application events.
@@ -76,15 +60,19 @@ class AerospikeServiceProvider extends ServiceProvider {
 
 
     /**
-	 * Get the services provided by the provider.
-	 *
-	 * @return array
-	 */
-	public function provides()
-	{
-		return array('aerospike');
-	}
+     * Get the services provided by the provider.
+     *
+     * @return array
+     */
+    public function provides()
+    {
+        return array('aerospike');
+    }
 
+    /**
+     * @param array $config
+     * @return string
+     */
     protected function getPrefix(array $config)
     {
         return array_get($config, 'prefix') ?: $this->app['config']['cache.prefix'];

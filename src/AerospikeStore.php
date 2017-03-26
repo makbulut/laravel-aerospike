@@ -37,8 +37,9 @@ class AerospikeStore implements Store
     {
         $this->aerospike = $aerospike;
         $this->namespace = $namespace;
-        $this->prefix = strlen($prefix) > 0 ? $prefix.':' : '';
+        $this->prefix = strlen($prefix) > 0 ? $prefix . ':' : '';
     }
+
     public function get($key)
     {
         $start_time = microtime(true);
@@ -46,8 +47,8 @@ class AerospikeStore implements Store
         $result = array();
         $status = $this->aerospike->get($this->getKey($key), $result);
 
-        $end_time =  microtime(true) - $start_time;
-        scv_info_msg("aerospike cache get time: ".$key." -> ".$end_time);
+        $end_time = microtime(true) - $start_time;
+        scv_info_msg("aerospike cache get time: " . $key . " -> " . $end_time);
 
         if ($status == \Aerospike::OK && isset($result['bins'][self::ARRAY_KEY])) {
             return $result['bins'][self::ARRAY_KEY];
@@ -55,6 +56,7 @@ class AerospikeStore implements Store
             return null;
         }
     }
+
     public function put($key, $value, $minutes)
     {
         $minutes = max(1, $minutes);
@@ -86,6 +88,7 @@ class AerospikeStore implements Store
     {
         //todo: implement after
     }
+
     public function getPrefix()
     {
         return $this->prefix;

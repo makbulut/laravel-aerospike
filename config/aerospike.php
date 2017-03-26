@@ -1,9 +1,8 @@
 <?php
 
-
 return [
 
-    'namespace'  => env('AEROSPIKE_NAMESPACE', 'test'),
+    'namespace' => env('AEROSPIKE_NAMESPACE', 'test'),
     'servers' => [
         "hosts" => [
             [

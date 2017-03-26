@@ -1,31 +1,31 @@
 {
-    "name": "scv/laravel-aerospike",
-    "description": "Aerospike cache driver for Laravel",
-    "keywords": ["aerospike", "laravel", "cache"],
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "Mehmet Akbulut",
-            "email": "mehmetakbulut.mail@gmail.com"
-        }
-    ],
-
-    "require": {
-        "php": ">=5.4.0",
-        "illuminate/support": "~5.0",
-        "illuminate/cache": "~5.0",
-        "aerospike/aerospike-client-php": "*"
-    },
-
-    "require-dev": {
-        "contorion/aerospike-stub": "dev-master"
-    },
-
-    "autoload" : {
-        "psr-4":{
-            "Makbulut\\Aerospike\\": "src/"
-        }
-    },
-
-    "minimum-stability": "dev"
+  "name": "scv/laravel-aerospike",
+  "description": "Aerospike cache driver for Laravel",
+  "keywords": [
+    "aerospike",
+    "laravel",
+    "cache"
+  ],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Mehmet Akbulut",
+      "email": "mehmetakbulut.mail@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=5.4.0",
+    "illuminate/support": "~5.0",
+    "illuminate/cache": "~5.0",
+    "aerospike/aerospike-client-php": "*"
+  },
+  "require-dev": {
+    "contorion/aerospike-stub": "dev-master"
+  },
+  "autoload": {
+    "psr-4": {
+      "Makbulut\\Aerospike\\": "src/"
+    }
+  },
+  "minimum-stability": "dev"
 }
