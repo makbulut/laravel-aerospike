@@ -2,4 +2,4 @@
 Aerospike cache driver for Laravel
 
 
-Note : Not coplated yet
+Note : Not completed yet
