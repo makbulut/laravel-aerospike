@@ -16,11 +16,9 @@
   "require": {
     "php": ">=5.4.0",
     "illuminate/support": "~5.0",
-    "illuminate/cache": "~5.0",
-    "aerospike/aerospike-client-php": "*"
+    "illuminate/cache": "~5.0"
   },
   "require-dev": {
-    "contorion/aerospike-stub": "dev-master"
   },
   "autoload": {
     "psr-4": {
