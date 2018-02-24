@@ -42,13 +42,8 @@ class AerospikeStore implements Store
 
     public function get($key)
     {
-        $start_time = microtime(true);
-
         $result = array();
         $status = $this->aerospike->get($this->getKey($key), $result);
-
-        $end_time = microtime(true) - $start_time;
-        scv_info_msg("aerospike cache get time: " . $key . " -> " . $end_time);
 
         if ($status == \Aerospike::OK && isset($result['bins'][self::ARRAY_KEY])) {
             return $result['bins'][self::ARRAY_KEY];
@@ -98,4 +93,30 @@ class AerospikeStore implements Store
     {
         return $this->aerospike->initKey($this->namespace, $this->prefix, $key);
     }
+    
+    /**
+     * Retrieve multiple items from the cache by key.
+     *
+     * Items not found in the cache will have a null value.
+     *
+     * @param  array $keys
+     * @return array
+     */
+    public function many(array $keys)
+    {
+        // TODO: Implement many() method.
+    }
+
+    /**
+     * Store multiple items in the cache for a given number of minutes.
+     *
+     * @param  array $values
+     * @param  float|int $minutes
+     * @return void
+     */
+    public function putMany(array $values, $minutes)
+    {
+        // TODO: Implement putMany() method.
+    }
+    
 }
