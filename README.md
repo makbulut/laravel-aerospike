@@ -25,7 +25,7 @@ You must then modify your `composer.json` file and run `composer update` to incl
 Or you can run the composer require command from your terminal.
 
 ```bash
-composer require makbulut/laravel-aerospike:1.0
+composer require makbulut/laravel-aerospike:1.1
 ```
 
 ## 🔧 Configuration
