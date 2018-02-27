@@ -18,14 +18,14 @@ You must then modify your `composer.json` file and run `composer update` to incl
 
 ```json
 "require": {
-    "makbulut/laravel-aerospike": "1.1"
+    "makbulut/laravel-aerospike": "1.2"
 }
 ```
 
 Or you can run the composer require command from your terminal.
 
 ```bash
-composer require makbulut/laravel-aerospike:1.1
+composer require makbulut/laravel-aerospike:1.2
 ```
 
 ## 🔧 Configuration
