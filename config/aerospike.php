@@ -15,7 +15,7 @@ return [
         "hosts" => [
             [
                 "addr" => env('AEROSPIKE_HOST', 'localhost'),
-                "port" => env('AEROSPIKE_PORT', 3000)
+                "port" => (int) env('AEROSPIKE_PORT', 3000)
             ]
         ]
     ]
