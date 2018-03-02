@@ -35,7 +35,7 @@ composer require makbulut/laravel-aerospike:1.2
 Setup service provider in `config/app.php`
 
 ```php
-Makbulut\Aerospike\AerospikeServiceProvider:class
+Makbulut\Aerospike\AerospikeServiceProvider::class
 ```
 
 #### Environment
