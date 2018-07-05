@@ -81,7 +81,7 @@ class AerospikeStore implements Store
 
     public function flush()
     {
-        //todo: implement after
+        $this->aerospike->truncate($this->namespace, null, 0);
     }
 
     public function getPrefix()
