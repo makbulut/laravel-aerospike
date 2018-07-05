@@ -18,14 +18,14 @@ You must then modify your `composer.json` file and run `composer update` to incl
 
 ```json
 "require": {
-    "makbulut/laravel-aerospike": "1.2"
+    "makbulut/laravel-aerospike": "1.3"
 }
 ```
 
 Or you can run the composer require command from your terminal.
 
 ```bash
-composer require makbulut/laravel-aerospike:1.2
+composer require makbulut/laravel-aerospike:1.3
 ```
 
 ## 🔧 Configuration
@@ -63,6 +63,7 @@ Cache::store('aerospike')->increment('rest_1', 1);
 Cache::store('aerospike')->decrement('rest_1', 1);
 Cache::store('aerospike')->forever('key_1', 1);
 Cache::store('aerospike')->forget('key_1');
+Cache::store('aerospike')->flush('test');
 ```
 
 Or
@@ -74,6 +75,7 @@ Cache::increment('rest_1', 1);
 Cache::decrement('rest_1', 1);
 Cache::forever('key_1', 1);
 Cache::forget('key_1');
+Cache::flush('test');
 ```
 
 For more information about Caches, check http://laravel.com/docs/cache.
